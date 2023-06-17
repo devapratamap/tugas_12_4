@@ -18,11 +18,9 @@ app.config['UPLOAD_FOLDER'] = './static/profile_pics'
 
 SECRET_KEY = 'SPARTA'
 
-MONGODB_CONNECTION_STRING = 'mongodb+srv://deva:HikkyS123@cluster0.lqhsg9q.mongodb.net/?retryWrites=true&w=majority'
-MONGODB_CLIENT = 'dbsparta_plus_week4'
-
-client = MongoClient(MONGODB_CONNECTION_STRING)
-db = client(MONGODB_CLIENT)
+cxn_str = f'mongodb+srv://deva:HikkyS123@cluster0.lqhsg9q.mongodb.net/?retryWrites=true&w=majority'
+client = MongoClient(cxn_str)
+db = client.dbsparta_plus_week4
 
 TOKEN_KEY = 'mytoken'
 
